@@ -1,0 +1,11 @@
+language: go
+go_import_path: go.nickng.io/typetools
+go:
+    - 1.15.x
+    - master
+    - tip
+matrix:
+    allow_failures:
+        - go: tip
+script:
+    - go test -v -race ./...
